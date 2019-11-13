@@ -1,11 +1,11 @@
+box: debian:stable-slim
 build:
-   box: debian:stable-slim
     steps:
     - install-packages:
         packages: curl
     - script:
-          name: install composer
-          code: apt install -y curl
+        name: install composer
+        code: apt install -y curl
     - slack-notifier:
        url: $SLACK_URL
        channel: notifications
